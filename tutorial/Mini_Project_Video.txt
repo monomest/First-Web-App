@@ -1,0 +1,111 @@
+====== SOCKET PROGRAMMING ======
+
+ -------------------------------------
+| Part 1 : Python Socket API Overview |
+ -------------------------------------
+
+------ API Methods and Calls ------
+socket() = creating socket
+bind() = specifying local socket address (ip address, port number(
+listen() = listen for connections
+accept() = accepting incoming connections
+cnnect() = specifying remote address and connecting to remote socket
+send() & recv() = send and receive data
+close() = close connection
+
+>  When creating socket, need to specify the address family and the type of the socket
+
+------ ADDRESS FAMILY ------
+socket.AF_UNIX = AF = address family. For UNIX socket that allows communication between processes on the same host
+socket.AF_INET = ipv4
+socket.AF_INET6 = ipv6
+
+------ Socket type ------
+socket.SOCK_STREAM = TCP (more reliable. Packet loss detected and retransmitted)
+socket.SOCK_DGRAM = UDP (no guarantee data will reach its destination)
+
+ -------------------------------------
+| Part 2: Programming the server side |
+ -------------------------------------
+
+#!/usr/bon/env python3
+
+import socket
+
+HOST = '127.0.0.1' # localhost
+PORT = 65432 # Port to listen on (non-privileged ports are > 1023)
+
+# 1. Create a socket
+print("1. Creating a socket")
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # creates socket object s using ipv4 and TCP
+
+# 2. Bind the created socket with a specific network interface and port number
+print("2. Binding the socket with HOST:" + HOST + " at PORT:" + str(PORT))
+s.bind((HOST, PORT)) # bind is a method of the socket object
+
+# 3. Listen for connection, allowing a server to accept the connection
+print("3. Listening for a connection")
+s.listen()
+
+# Loop until break
+while True:
+   # 4. Wait for incoming connection, when a client connects it returns a new socket object
+   print("4. Waiting for incoming connection ......")
+   conn, addr = s.accept() # conn represents the connection, addr is for address is a tuple containing host and port number of client
+
+   with conn:
+      print('Connected by', addr)
+   
+      data = conn.recv(1024)
+      print("5. Received data: " + str(data))
+
+      print("6. Replying with: " + str(data)) # Echo back the message it receives
+      conn.sendall(data)
+
+      if data == b'CLOSE': # if message received is 'CLOSE', close the API call
+         print("7. Closing the socket")
+         s.close()
+         break
+
+ --------------------------------------
+| Part 4 : Programming the client side |
+ --------------------------------------
+   
+#!/usr/bin/env python3
+
+import socket
+
+HOST = '127.0.0.1' # The server's hostname or IP address
+PORT = 65432 # The port used by the server
+
+message = input("Type your message:")
+message_byte = bytes(message, 'utf-8')
+
+print("1. Creating socket")
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+   print("2. Connecting to the server")
+   s.connect((HOST, PORT))
+
+   printf("3. Sending mesage: " + str(message_byte_ " to the server")
+   s.sendall(message_byte) # send API
+
+   print("4. Receiving message from the server")
+   data = s.recv(1024) # store data in the data variable
+
+   print('      Received:', repr(data))
+
+   print("5. Closing the socket")
+   s.close()
+
+  --------------------
+| Part 5: Program Demo |
+  --------------------
+
+------ RUn server program ------
+> python server.py
+
+------ RUn client program ------
+> python client.py
+  Type your message: any message
+   
+
