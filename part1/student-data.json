@@ -1,0 +1,102 @@
+{
+    "George": {
+        "studentname": "George",
+        "studentmark": 95
+    },
+    "Kelly": {
+        "studentname": "Kelly",
+        "studentmark": 100
+    },
+    "Mike": {
+        "studentname": "Mike",
+        "studentmark": 87
+    },
+    "Oliver": {
+        "studentname": "Oliver",
+        "studentmark": 53
+    },
+    "Amelia": {
+        "studentname": "Amelia",
+        "studentmark": 80
+    },
+    "Jack": {
+        "studentname": "Jack",
+        "studentmark": 65
+    },
+    "Emma": {
+        "studentname": "Emma",
+        "studentmark": 75
+    },
+    "Lily": {
+        "studentname": "Lily",
+        "studentmark": 56
+    },
+    "Liam": {
+        "studentname": "Liam",
+        "studentmark": 43
+    },
+    "Jacob": {
+        "studentname": "Jacob",
+        "studentmark": 59
+    },
+    "James": {
+        "studentname": "James",
+        "studentmark": 54
+    },
+    "Daniel": {
+        "studentname": "Daniel",
+        "studentmark": 99
+    },
+    "Thomas": {
+        "studentname": "Thomas",
+        "studentmark": 56
+    },
+    "Sophia": {
+        "studentname": "Sophia",
+        "studentmark": 87
+    },
+    "Emily": {
+        "studentname": "Emily",
+        "studentmark": 89
+    },
+    "Susan": {
+        "studentname": "Susan",
+        "studentmark": 54
+    },
+    "David": {
+        "studentname": "David",
+        "studentmark": 78
+    },
+    "Mary": {
+        "studentname": "Mary",
+        "studentmark": 46
+    },
+    "William": {
+        "studentname": "William",
+        "studentmark": 94
+    },
+    "Charles": {
+        "studentname": "Charles",
+        "studentmark": 42
+    },
+    "Linda": {
+        "studentname": "Linda",
+        "studentmark": 81
+    },
+    "Jessica": {
+        "studentname": "Jessica",
+        "studentmark": 39
+    },
+    "Sarah": {
+        "studentname": "Sarah",
+        "studentmark": 89
+    },
+    "John": {
+        "studentname": "John",
+        "studentmark": 58
+    },
+    "Lisa": {
+        "studentname": "Lisa",
+        "studentmark": 68
+    }
+}
