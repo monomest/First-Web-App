@@ -3,12 +3,12 @@
 Code for my first web project, for the UNSW course TELE3118, Term 3, 2020. 
 
 ### **Part 1 [5 points]**
-Populating database: In this part we write a UDP client program that sends a message to a UDP server requesting the list of students and their marks.
+Populating database: In this part we write a UDP client program that sends a message to a UDP server requesting the list of students and their marks. We store this information in a JSON file.
 
 To run:
 - Download the directory ```part1```
 - Enter the following into your terminal: ```python udp_client.py```
-- Observe this returns the list of student marks
+- Observe this returns the list of student marks in the form of a JSON file
 
 ### **Tutorial**
 Contains sample code and notes from the course tutorial video.
