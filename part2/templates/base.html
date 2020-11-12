@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('studentlist') }}">Student list</a>
+    <br>
     {% block head %}{% endblock %}
+
 </head>
 <body>
-    {%block body %}{% endblock %}
+    
+    {% block body %}
+    
+    {% endblock %}
 </body>
 </html>
