@@ -34,8 +34,6 @@ def studentlist():
 # webpage to show specified student's marks
 @app.route('/api/studentmark/<name>', methods = ['GET', 'POST'])
 def studentmark(name):
-    print(name)
-
     with open('../part1/student-data.json') as f:
         data = json.load(f)
     for x in data.items():
