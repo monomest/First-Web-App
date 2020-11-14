@@ -10,6 +10,29 @@ To run:
 - Enter the following into your terminal: ```python udp_client.py```
 - Observe this returns the list of student marks in the form of a JSON file
 
+### **Part 2 [5 points]**
+A webserver that queries the database, possible with any web browser.
+
+To run:
+- Download the directory ```part 2```
+- Install ```flask``` using pip
+- Enter the following into your terminal ```python app.py```
+- Open the local host on the web browser
+- Interact with the website
+
+### **Part 3 [3 points]**
+A pretty front-end.
+
+To run:
+- Download the directory ```part 3```
+- Install ```flask``` using pip
+- Enter the following into your terminal ```python app.py```
+- Open the local host on the web browser
+- Interact with the website
+
+### **Part 3 - Baby**
+A version of ```part 3``` that is coded by Renee's little brother.
+
 ### **Tutorial**
 Contains sample code and notes from the course tutorial video.
 
