@@ -1,8 +1,56 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<h1>Renee and Arthur's cool website!</h1>
-<p><a href="{{ url_for('studentlist') }}">Student list form</a></p>
+<!-- Style -->
+<style>
+    h1 {
+        text-align: center;
+        font-size: 110px;
+        font-family: Georgia, serif;
+    }
+
+    p {
+        text-align: center;
+        font-family: Verdana, sans-serif;
+    }
+
+    div {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .title {
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        color: #000;
+    }
+
+    .title:hover {
+        color: #5da2d5
+    }
+    .subtitle {
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        color: #000;
+    }
+
+    .subtitle:hover {
+        color: #026670
+    }
+</style>
+
+<!-- Heading -->
+<div id="home-heading" class="container-fluid">
+    <h1 class="title">Renee and Arthur's Epic Website</h1>
+    <p class="subtitle">Where you can find information about non-existent students</p>
+    <a href="{{ url_for('studentlist') }}" class="btn btn-danger btn-lg"
+       role="button" aria-pressed="true">Find Students</a>
+</div>
+
 {% endblock %}
 
 {% block body %}

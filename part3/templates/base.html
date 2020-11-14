@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap CDN -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -11,18 +12,59 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <a href="{{ url_for('index') }}">Home</a>
-    <a href="{{ url_for('studentlist') }}">Student list</a>
-    <br>
+
+    <!-- Style -->
+    <style>
+        #home-heading {
+            padding-top: 50px;
+            height: 700px;
+            color: #ffff;
+            background: -webkit-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            background: -o-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            background: -moz-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            background: linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            font-family: Georgia, serif;
+        }
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+            background-color: #90ccf4;
+            color: #fff;
+        }
+        #page-heading {
+            padding-top: 10px;
+            height: 120px;
+            color: #ffff;
+            background: -webkit-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            background: -o-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            background: -moz-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            background: linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
+            font-family: Georgia, serif;
+        }
+    </style>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('index') }}">
+                <span class="glyphicon glyphicon-home"></span> Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="{{ url_for('studentlist') }}">STUDENT LIST</a></li>
+                    <li><a href="#portfolio">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     {% block head %}{% endblock %}
-
 </head>
-<body>
+    <body>
 
-    {% block body %}
+        {% block body %}
 
-    {% endblock %}
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</body>
+        {% endblock %}
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
 </html>

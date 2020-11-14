@@ -1,7 +1,27 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<h1>Student list:</h1>
+<!-- Style -->
+<style>
+    h1 {
+        padding-top: 10px;
+        font-size: 50px;
+        color: #000
+    }
+    .title {
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        color: #000;
+    }
+
+    .title:hover {
+        color: #5da2d5
+
+    }
+</style>
+    <h1 class="title">Student List</h1>
 
 <!-- comment -->
 {% for x in data.items() %}

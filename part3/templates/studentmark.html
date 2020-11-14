@@ -1,13 +1,33 @@
 {% extends 'base.html' %}
-
 {% block head %}
-<h1>Student info</h1>
-<p>Name: {{ name }}
+<style>
+    h1 {
+        padding-top: 10px;
+        font-size: 50px;
+        color: #000
+    }
+
+    .title {
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        color: #000;
+    }
+
+        .title:hover {
+            color: #5da2d5
+        }
+</style>
+<h1 class="title">Student info</h1>
+<p>
+    Name: {{ name }}
     <br>
     Mark: {{ mark }}
 </p>
 
-
+<a href="{{ url_for('studentlist') }}" class="btn btn-primary btn-sm"
+   role="button" aria-pressed="true">Go back to Students</a>
 
 {% endblock %}
 
