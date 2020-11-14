@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h1>Student list:</h1>
+
+<!-- comment -->
+{% for x in data.items() %}
+    <p><a href="{{ url_for('studentmark', name = data[x[0]]['studentname'] )}}">{{ data[x[0]]['studentname'] }}</a></p>
+{% endfor %}
+
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
