@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <style>
+        .reneeisthebest {
+            color: yellow;
+            border: 10px  dashed red;
+            background: linear-gradient(red, orange);
+            text-align: center;
+        }
+    </style>
+    <div class="reneeisthebest">
+        <h1>Renee and Arthur's cool website!</h1>
+    </div>
+<style>
+    .jdeiod {
+        border: 200px groove outset yellow;
+    }
+
+
+</style>
+<div class="jdeiod">
+<style>
+    .jamesisaruler {
+        background: radial-gradient( grey,white);
+        
+        border: 5px groove indianred;
+    }
+   
+</style>
+<div class="jamesisaruler">
+
+
+ <p> <a href="{{ url_for('studentlist') }}">Student list form</a></p>
+ 
+    
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
+</div>
+</div>
