@@ -2,11 +2,19 @@
 {% block head %}
 <style>
     h1 {
-        padding-top: 10px;
+        padding-top: 20px;
         font-size: 50px;
-        color: #000
+        color: #000;
+        font-family: 'Lucida Console', serif;
     }
 
+    p {
+        font-family: Verdana, sans-serif;
+    }
+    h2 {
+        font-size: 20px;
+        font-family: "Lucida Console", monospace;
+    }
     .title {
         -moz-transition: all .2s ease-in;
         -o-transition: all .2s ease-in;
@@ -18,15 +26,22 @@
         .title:hover {
             color: #5da2d5
         }
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+        background-color: #90ccf4 !important;
+        color: black !important;
+    }
 </style>
-<h1 class="title">Student info</h1>
-<p>
+<div id="student-heading" class="container-fluid">
+    <h1 class="title">This is {{ name }}.</h1>
+    <p class="title">Hi, I'm {{ name }} and I don't exist.</p>
+</div>
+<h2>
     Name: {{ name }}
     <br>
     Mark: {{ mark }}
-</p>
+</h2>
 
-<a href="{{ url_for('studentlist') }}" class="btn btn-primary btn-sm"
+<a href="{{ url_for('studentlist') }}" class="btn btn-primary"
    role="button" aria-pressed="true">Go back to Students</a>
 
 {% endblock %}

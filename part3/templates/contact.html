@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!-- Style -->
+<style>
+    h1 {
+        padding-top: 20px;
+        font-size: 50px;
+        color: #000;
+        font-family: 'Lucida Console', serif;
+    }
+
+    p {
+        font-family: Verdana, sans-serif;
+    }
+
+    a:link {
+        color: #FFFFFF;
+    }
+
+    a:visited {
+        color: #FFFFFF;
+    }
+
+    a:hover {
+        color: #f78888;
+    }
+
+    .title {
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        color: #000;
+    }
+
+        .title:hover {
+            color: #5da2d5
+        }
+
+    .carousel-container {
+        width: 500px;
+        height: 500px;
+    }
+    h2 {
+        font-size: 50px;
+        font-family: 'Lucida Console', serif;
+        position: absolute;
+        left: 510px;
+        top: 150px;
+    }
+    h4 {
+        font-size: 20px;
+        position: absolute;
+        left: 510px;
+        top: 220px;
+    }
+</style>
+
+<!-- Linkedin Plug -->
+<div id="contact-heading" class="container-fluid">
+    <h1 class="title">Contact Us!</h1>
+    <p class="title"> You know you want to...</p>
+</div>
+
+<!-- Pictures -->
+<div class="carousel-container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/static/images/arthur.jpg" alt="Arthur" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3>And I say HEY!</h3>
+                    <p>
+                        Grab a coffee with <a href="https://www.linkedin.com/in/arthur-sze-ab4367170"><u> Arthur</u></a>
+                        - our Electrical Engineer and Computer Scientist!
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/static/images/renee.jpg" alt="Renee" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3>What a wonderful kind of day!</h3>
+                    <p>
+                        Grab a shot of whiskey with <a href="https://www.linkedin.com/in/reneeylu"><u> Renee</u></a>
+                        - our Electrical Engineer and Economist!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<h2 class="title">Hello, stranger!</h2>
+<h4>Welcome to Renee and Arthur's little space on the internet. <br />
+    < - - Look to your left to see what we look like and grab a drink with us! <br />
+    - - > Look to the right for the edge of your screen. <br />
+    And, finally, look around this website for information about non-existent students!</h4>
+    {% endblock %}
+
+    {% block body %}
+
+    {% endblock %}

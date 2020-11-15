@@ -29,16 +29,25 @@
             background-color: #90ccf4;
             color: #fff;
         }
-        #page-heading {
+        #about-heading {
             padding-top: 10px;
-            height: 120px;
+            height: 150px;
             color: #ffff;
-            background: -webkit-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
-            background: -o-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
-            background: -moz-linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
-            background: linear-gradient(70deg, #f3d250 30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #90ccf4 60%, #f78888 60%);
-            font-family: Georgia, serif;
+            background: #f3d250;
         }
+        #student-heading {
+            padding-top: 10px;
+            height: 150px;
+            color: #ffff;
+            background: #90ccf4;
+        }
+        #contact-heading {
+            padding-top: 10px;
+            height: 150px;
+            color: #ffff;
+            background: #f78888;
+        }
+
     </style>
 
     <!-- Top Navigation Bar -->
@@ -50,9 +59,9 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
                     <li><a href="{{ url_for('studentlist') }}">STUDENT LIST</a></li>
-                    <li><a href="#portfolio">CONTACT</a></li>
+                    <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
                 </ul>
             </div>
         </div>

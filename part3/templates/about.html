@@ -9,6 +9,7 @@
         color: #000;
         font-family: 'Lucida Console', serif;
     }
+
     p {
         font-family: Verdana, sans-serif;
     }
@@ -20,24 +21,21 @@
         color: #000;
     }
 
-        .title:hover {
-            color: #5da2d5
-        }
-</style>
+    .title:hover {
+        color: #5da2d5
 
-<div id="student-heading" class="container-fluid">
-    <h1 class="title">Student List</h1>
-    <p class="title">These students don't exist!</p>
+    }
+</style>
+<div id="about-heading" class="container-fluid">
+    <h1 class="title">About This Website</h1>
+    <p class="title"> Why does this website even exist? The answer lies here...</p>
 </div>
 
-<!-- comment -->
-<br />
-{% for x in data.items() %}
-<p><a href="{{ url_for('studentmark', name = data[x[0]]['studentname'] )}}">{{ data[x[0]]['studentname'] }}</a></p>
-{% endfor %}
+    <!-- Assignment Page Fetch -->
+    <embed src="https://subjects.ee.unsw.edu.au/tele3118/labs/lab6.html" style="width:1200px; height: 800px;">
 
-{% endblock %}
+    {% endblock %}
 
-{% block body %}
+    {% block body %}
 
-{% endblock %}
+    {% endblock %}
