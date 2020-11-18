@@ -29,7 +29,7 @@ message = ('studentmarklist' + '\0')
 message_byte = bytes(message, encoding)
 
 # JSON output file name
-out_name = 'student-data.json' 
+out_name = 'student-data-original.json' 
 
 print()
 print("----------- Querying Server -----------")
