@@ -21,19 +21,28 @@
     }
 
     .title:hover {
-        color: #5da2d5
+        color: #5da2d5;
     }
     
     input[type = text] {
         height: 28px ;
-        align-content: center
+        align-content: center;
         }
+    
     input[type = submit] {
         background-color: #90ccf4;
         color: #000;
         border: none;
         font-family: Verdana, sans-serif;
         height: 28px;
+    }
+
+    #studentlist {
+    columns: 3; /* Change this line to however many cols*/
+    line-height: 150%;
+    -webkit-columns: 3;
+    -moz-columns: 2;
+    list-style-type: none;
     }
     
 </style>
@@ -46,14 +55,16 @@
 <!-- comment -->
 <br>
     <form method = "POST" action = "{{ url_for('studentlist') }}">
-            <input type = "text" name = "searchbox" value = "{{ name }}">
+            <input type = "text" name = "searchbox" value = "{{ userinput }}">
             <input type="submit" value="Search student name">
     </form>
 
-<br />
-{% for x in data.items() %}
-<p><a href="{{ url_for('studentmark', name = data[x[0]]['studentname'] )}}">{{ data[x[0]]['studentname'] }}</a></p>
+<br/>
+<ul id = "studentlist">
+{% for x in students %}
+<li><a href="{{ url_for('studentmark', name = x )}}">{{ x }}</a></li>
 {% endfor %}
+</ul>
 
 {% endblock %}
 
