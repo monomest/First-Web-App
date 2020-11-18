@@ -29,13 +29,25 @@ def contact():
 def studentlist():
     with open('../part1/student-data.json') as f:
         data = json.load(f)
-    '''
+    name = ""
+
+    # Search by student name
     if request.method == 'POST':
-        name = request.args.get('type')
-        print(name)
-        return render_template('studentlist.html', data = data)
-    '''
-    return render_template('studentlist.html', data = data)
+        filtered_names = {}
+        fields = ['studentname', 'studentmark']
+        name = request.form['searchbox']
+        for x in data.items():
+            if name in data[x[0]]['studentname'].lower():
+                # Student class object derived from part 1 udp_client.py
+                # Make a new list and add the filtered students to it
+                current_student = {}
+                current_student[fields[0]] = data[x[0]]['studentname']
+                current_student[fields[1]] = data[x[0]]['studentmark']
+                filtered_names[data[x[0]]['studentname']] = current_student
+        return render_template('studentlist.html', data = filtered_names, name = name)
+
+    # Show full student list
+    return render_template('studentlist.html', data = data, name = name)
 
 
 
@@ -44,6 +56,7 @@ def studentlist():
 def studentmark(name):
     with open('../part1/student-data.json') as f:
         data = json.load(f)
+
     for x in data.items():
         if name == data[x[0]]['studentname']:
             mark = data[x[0]]['studentmark']

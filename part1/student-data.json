@@ -43,6 +43,14 @@
         "studentname": "James",
         "studentmark": 54
     },
+    "Renee": {
+        "studentname": "Renee",
+        "studentmark": 85
+    },
+    "Arthur": {
+        "studentname": "Arthur",
+        "studentmark": 76
+    },
     "Daniel": {
         "studentname": "Daniel",
         "studentmark": 99
