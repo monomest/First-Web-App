@@ -37,7 +37,7 @@ def studentlist():
         fields = ['studentname', 'studentmark']
         name = request.form['searchbox']
         for x in data.items():
-            if name in data[x[0]]['studentname'].lower():
+            if name.lower() in data[x[0]]['studentname'].lower():
                 # Student class object derived from part 1 udp_client.py
                 # Make a new list and add the filtered students to it
                 current_student = {}
