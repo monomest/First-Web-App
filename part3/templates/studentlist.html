@@ -20,17 +20,36 @@
         color: #000;
     }
 
-        .title:hover {
-            color: #5da2d5
+    .title:hover {
+        color: #5da2d5
+    }
+    
+    input[type = text] {
+        height: 28px ;
+        align-content: center
         }
+    input[type = submit] {
+        background-color: #90ccf4;
+        color: #000;
+        border: none;
+        font-family: Verdana, sans-serif;
+        height: 28px;
+    }
+    
 </style>
 
 <div id="student-heading" class="container-fluid">
     <h1 class="title">Student List</h1>
-    <p class="title">These students don't exist!</p>
+    <p class="title">These students don't exist! (mostly)</p>
 </div>
 
 <!-- comment -->
+<br>
+    <form method = "POST" action = "{{ url_for('studentlist') }}">
+            <input type = "text" name = "searchbox" value = "{{ name }}">
+            <input type="submit" value="Search student name">
+    </form>
+
 <br />
 {% for x in data.items() %}
 <p><a href="{{ url_for('studentmark', name = data[x[0]]['studentname'] )}}">{{ data[x[0]]['studentname'] }}</a></p>

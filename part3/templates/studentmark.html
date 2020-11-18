@@ -33,7 +33,11 @@
 </style>
 <div id="student-heading" class="container-fluid">
     <h1 class="title">This is {{ name }}.</h1>
+    {% if name == 'Arthur' or name == 'Renee' %}
+    <p class="title">Hi, I'm {{ name }} and I exist.</p>
+    {% else %}
     <p class="title">Hi, I'm {{ name }} and I don't exist.</p>
+    {% endif %}
 </div>
 <h2>
     Name: {{ name }}
