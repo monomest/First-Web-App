@@ -29,8 +29,8 @@ def contact():
 def studentlist():
     with open('../part1/student-data.json') as f:
         data = json.load(f)
-    name = ""
-
+    userinput = ""
+    
     # Search by student name
     if request.method == 'POST':
         filtered_names = {}
@@ -44,10 +44,13 @@ def studentlist():
                 current_student[fields[0]] = data[x[0]]['studentname']
                 current_student[fields[1]] = data[x[0]]['studentmark']
                 filtered_names[data[x[0]]['studentname']] = current_student
-        return render_template('studentlist.html', data = filtered_names, name = name)
+                
+        sorted_list = sorted(filtered_names, key = lambda x: x[0])
+        return render_template('studentlist.html', students = sorted_list, name = name)
 
-    # Show full student list
-    return render_template('studentlist.html', data = data, name = name)
+    sorted_list = sorted(data, key = lambda x: x[0])
+
+    return render_template('studentlist.html', students = sorted_list, userinput = userinput)
 
 
 
